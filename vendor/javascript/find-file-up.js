@@ -1,0 +1,4 @@
+// find-file-up@0.1.3 downloaded from https://ga.jspm.io/npm:find-file-up@0.1.3/index.js
+
+import r from"fs";import e from"path";import n from"resolve-dir";import i from"fs-exists-sync";var t={};var o=r;var f=e;var s=n;var a=i;t=function(r,e,n,i){if("function"===typeof e){i=e;e=null}if("function"===typeof n){i=n;n=Infinity}var t=e?s(e):".";var o=0;var a=f.resolve(f.sep);(function find(e,i){var t=f.resolve(e,r);exists(t,(function(r){o++;r?i(null,t):o>=n||e===f.sep||"."===e||e===a?i():find(f.dirname(e),i)}))})(t,i)};t.sync=function(r,e,n){var i=e?s(e):".";var t=f.join(i,r);var o=0;var v=f.resolve(f.sep);if(a(t))return f.resolve(t);if(0===n)return null;while(i=f.dirname(i)){o++;var u=f.resolve(i,r);if(a(u))return u;if(o>=n||"."===i||i===f.sep||i===v)return}};function exists(r,e){(o.access||o.stat)(r,(function(r){r&&"ENOENT"===r.code?e(false):e(r||true)}))}var v=t;const u=t.sync;export default v;export{u as sync};
+

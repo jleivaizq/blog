@@ -1,0 +1,4 @@
+// ansi-colors@0.2.0 downloaded from https://ga.jspm.io/npm:ansi-colors@0.2.0/index.js
+
+import r from"lazy-cache";import i from"ansi-bgblack";import o from"ansi-bgblue";import m from"ansi-bgcyan";import a from"ansi-bggreen";import n from"ansi-bgmagenta";import t from"ansi-bgred";import e from"ansi-bgwhite";import s from"ansi-bgyellow";import f from"ansi-black";import p from"ansi-blue";import l from"ansi-bold";import g from"ansi-cyan";import b from"ansi-dim";import u from"ansi-gray";import d from"ansi-green";import c from"ansi-grey";import y from"ansi-hidden";import h from"ansi-inverse";import v from"ansi-italic";import w from"ansi-magenta";import k from"ansi-red";import q from"ansi-reset";import x from"ansi-strikethrough";import z from"ansi-underline";import j from"ansi-white";import A from"ansi-yellow";var B={};var C=r(null);var D=null;require=C;i;o;m;a;n;t;e;s;f;p;l;g;b;u;d;c;y;h;v;w;k;q;x;z;j;A;require=D;B=C;var E=B;export default E;
+

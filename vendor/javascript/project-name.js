@@ -1,0 +1,4 @@
+// project-name@0.2.6 downloaded from https://ga.jspm.io/npm:project-name@0.2.6/index.js
+
+import r from"fs";import n from"path";import e from"find-pkg";import a from"git-repo-name";var t={};function _nullRequire(r){var n=new Error("Cannot find module '"+r+"'");n.code="MODULE_NOT_FOUND";throw n}var u=r;var i=n;var m=e;var o=a;t=function(r){return pkgname(r)||gitname(r)||basename(r)};function pkgname(r){r=r||"";try{var n=m.sync(r,0);if(!n)return null;var e=_nullRequire(i.resolve(n));return e.name}catch(r){}return null}function gitname(r){var n=dirname(r||"");if(!n)return null;try{return o.sync(n)}catch(r){}return null}function basename(r){var n=dirname(r);return n?i.basename(n):null}function dirname(r){r=i.resolve(r||"");try{var n=u.statSync(r);n.isFile()&&(r=i.dirname(r));return i.basename(r)}catch(r){}return null}var l=t;export default l;
+

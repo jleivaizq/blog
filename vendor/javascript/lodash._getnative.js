@@ -1,0 +1,4 @@
+// lodash._getnative@3.9.1 downloaded from https://ga.jspm.io/npm:lodash._getnative@3.9.1/index.js
+
+var t={};var e="[object Function]";var r=/^\[object .+?Constructor\]$/;function isObjectLike(t){return!!t&&"object"==typeof t}var n=Object.prototype;var o=Function.prototype.toString;var i=n.hasOwnProperty;var c=n.toString;var a=RegExp("^"+o.call(i).replace(/[\\^$.*+?()[\]{}|]/g,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$");function getNative(t,e){var r=null==t?void 0:t[e];return isNative(r)?r:void 0}function isFunction(t){return isObject(t)&&c.call(t)==e}function isObject(t){var e=typeof t;return!!t&&("object"==e||"function"==e)}function isNative(t){return null!=t&&(isFunction(t)?a.test(o.call(t)):isObjectLike(t)&&r.test(t))}t=getNative;var u=t;export default u;
+

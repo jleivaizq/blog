@@ -1,0 +1,4 @@
+// split-string@1.0.1 downloaded from https://ga.jspm.io/npm:split-string@1.0.1/index.js
+
+import e from"extend-shallow";var r={};var t=e;r=function(e,r){if("string"!==typeof e)throw new TypeError("expected a string");"string"===typeof r&&(r={sep:r});var s=t({sep:"."},r);var o=[""];var i=e.length;var l=-1;var n;while(++l<i){var a=e[l];var f=e[l+1];if("\\"!==a){if('"'===a){n=getClose(e,'"',l+1);if(-1===n){if(false!==s.strict)throw new Error("unclosed double quote: "+e);n=l}a=true===s.keepDoubleQuotes?e.slice(l,n+1):e.slice(l+1,n);l=n}if("'"===a){n=getClose(e,"'",l+1);if(-1===n){if(false!==s.strict)throw new Error("unclosed single quote: "+e);n=l}a=true===s.keepSingleQuotes?e.slice(l,n+1):e.slice(l+1,n);l=n}a===s.sep?o.push(""):o[o.length-1]+=a}else{var u=true===s.keepEscaping?a+f:f;o[o.length-1]+=u;l++}}return o};function getClose(e,r,t){var s=e.indexOf(r,t);return"\\"===e.charAt(s-1)?getClose(e,r,s+1):s}var s=r;export default s;
+

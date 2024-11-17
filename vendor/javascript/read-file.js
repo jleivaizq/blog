@@ -1,0 +1,4 @@
+// read-file@0.2.0 downloaded from https://ga.jspm.io/npm:read-file@0.2.0/index.js
+
+import r from"fs";var e={};var n=r;function read(r,e,t){if("function"===typeof e){t=e;e={}}if("function"!==typeof t)throw new TypeError("read-file async expects a callback function.");"string"!==typeof r&&t(new TypeError("read-file async expects a string."));n.readFile(r,e,(function(r,n){if(r)return t(r);t(null,normalize(n,e))}))}read.sync=function(r,e){if("string"!==typeof r)throw new TypeError("read-file sync expects a string.");try{return normalize(n.readFileSync(r,e),e)}catch(e){e.message='Failed to read "'+r+'": '+e.message;throw new Error(e)}};function normalize(r,e){r=stripBom(r);return"object"===typeof e&&true===e.normalize?String(r).replace(/\r\n|\n/g,"\n"):r}function stripBom(r){return"string"===typeof r&&"\ufeff"===r.charAt(0)?r.slice(1):r}e=read;var t=e;export default t;
+

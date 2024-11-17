@@ -1,0 +1,4 @@
+// array-sort@0.1.4 downloaded from https://ga.jspm.io/npm:array-sort@0.1.4/index.js
+
+import r from"default-compare";import t from"kind-of";import e from"get-value";var o={};var a=r;var n=t;var f=e;function arraySort(r,t,e){if(null==r)return[];if(!Array.isArray(r))throw new TypeError("array-sort expects an array.");if(1===arguments.length)return r.sort();var o=flatten([].slice.call(arguments,1));"object"===n(o[o.length-1])&&(e=o.pop());return r.sort(sortBy(o,e))}function sortBy(r,t){t=t||{};return function compareFn(e,o){var a=r.length,n=-1;var f;while(++n<a){f=compare(r[n],e,o);if(0!==f)break}return true===t.reverse?-1*f:f}}function compare(r,t,e){return"function"===typeof r?r(t,e,compare.bind(null,null)):r&&"object"===typeof t&&"object"===typeof e?compare(null,f(t,r),f(e,r)):a(t,e)}function flatten(r){return[].concat.apply([],r)}o=arraySort;var l=o;export default l;
+

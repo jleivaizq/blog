@@ -1,0 +1,4 @@
+// next-tick@0.2.2 downloaded from https://ga.jspm.io/npm:next-tick@0.2.2/index.js
+
+import t from"process";var n={};var e=t;var o,r;o=function(t){if("function"!==typeof t)throw new TypeError(t+" is not a function");return t};r=function(t){var n=document.createTextNode(""),e,r=0;new t((function(){var t;if(e){t=e;e=null;"function"!==typeof t?t.forEach((function(t){t()})):t()}})).observe(n,{characterData:true});return function(t){o(t);if(e)"function"===typeof e?e=[e,t]:e.push(t);else{e=t;n.data=r=++r%2}}};n=function(){if("undefined"!==typeof e&&e&&"function"===typeof e.nextTick)return e.nextTick;if("object"===typeof document&&document){if("function"===typeof MutationObserver)return r(MutationObserver);if("function"===typeof WebKitMutationObserver)return r(WebKitMutationObserver)}return"function"===typeof e.nextTick?function(t){e.nextTick(o(t))}:"function"===typeof setTimeout?function(t){setTimeout(o(t),0)}:null}();var i=n;export default i;
+

@@ -1,0 +1,4 @@
+// base-task@0.6.2 downloaded from https://ga.jspm.io/npm:base-task@0.6.2/index.js
+
+import t from"is-valid-app";import i from"composer";var s={};s=function(s,n){var a=t;var r=i;if("function"===typeof s){n=s;s=void 0}return function baseTask(t){if(a(t,"base-task")){var i=this.constructor;r.call(this,s);this.visit("define",r.prototype);var n=this;var e=this.emit;this.on("starting",(function(t,i){i.status="starting";n.emit("build",i)}));this.on("finished",(function(t,i){i.status="finished";n.emit("build",i)}));this.emit=function(t,i,s){if("task"!==t||"undefined"!==typeof i||!s)return e.apply(n,arguments);s.status="register";n.emit("task",s)};this.on("task:starting",(function(t,i){i.status="starting";n.emit("task",i)}));this.on("task:finished",(function(t,i){i.status="finished";n.emit("task",i)}));this.constructor=i;return baseTask}}};var n=s;export default n;
+

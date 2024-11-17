@@ -1,0 +1,4 @@
+// base-cwd@0.3.4 downloaded from https://ga.jspm.io/npm:base-cwd@0.3.4/index.js
+
+import r from"path";import e from"empty-dir";import t from"is-valid-app";import i from"find-pkg";import n from"process";var o={};var f=n;var a=r;var c=e;var u=t;var p=i;o=function(r,e){if("string"!==typeof r&&!Array.isArray(r)){e=r;r=void 0}e=e||{};var t;return function plugin(i){if(u(i,"base-cwd",r)){var n=[i.cwd||f.cwd()];Object.defineProperty(this,"cwd",{configurable:true,enumerable:true,set:function(r){t=i.cache.cwd=a.resolve(r);if(n[n.length-1]!==t){n.push(t);i.emit("cwd",t)}},get:function(){if("string"===typeof t)return a.resolve(t);if("string"===typeof i.options.cwd)return t=a.resolve(i.options.cwd);var r=f.cwd();if(false===e.findup){t=r;return r}var n=c.sync(r,(function(r){return!/\.DS_Store/.test(r)}));if(n){t=r;return r}var o=p.sync(r);if(o){var u=a.dirname(o);u!==r&&(t=i.cache.cwd=u);return u}return r}});return plugin}}};var s=o;export default s;
+

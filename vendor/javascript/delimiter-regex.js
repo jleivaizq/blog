@@ -1,0 +1,4 @@
+// delimiter-regex@2.0.0 downloaded from https://ga.jspm.io/npm:delimiter-regex@2.0.0/index.js
+
+import e from"util";import r from"isobject";import t from"extend-shallow";var a={};var n=e;var i=r;var o=t;a=function delimiterRegex(e,r,t){if(e instanceof RegExp)return e;if("undefined"===typeof e)return/\$\{([^\\}]*(?:\\.[^\\}]*)*)\}/g;if("string"===typeof e&&"string"===typeof r)return createRegex(e,r,t);if(Array.isArray(e))return createRegex(e[0],e[1],r);if(i(e))return createRegex(null,null,e);var a=[].slice.call(arguments);throw new Error("cannot created delimiters from: "+n.inspect(a))};function createRegex(e,r,t){var a=o({flags:""},t);var n=a.tagname?createTag(a.tagname):"([\\s\\S]+?)";e=e||a.open||"\\$\\{";r=r||a.close||"\\}";return new RegExp(e+n+r,a.flags)}function createTag(e){return` (${e.trim()}) `}var f=a;export default f;
+

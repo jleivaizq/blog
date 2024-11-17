@@ -1,0 +1,4 @@
+// assemble-core@0.25.0 downloaded from https://ga.jspm.io/npm:assemble-core@0.25.0/index.js
+
+import e from"templates";import s from"lazy-cache";import r from"assemble-fs";import i from"assemble-render-file";import t from"assemble-streams";import m from"base-task";import l from"define-property";var n={};var o=s(null);var a=null;require=o;r;i;t;m;l;require=a;n=o;var b=n;var f={};var u=e;var p=b;function Assemble(e){if(!(this instanceof Assemble))return new Assemble(e);u.call(this,e);this.is("assemble");this.initCore()}u.extend(Assemble);u.bubble(Assemble);Assemble.prototype.initCore=function(){Assemble.initCore(this)};Assemble.initCore=function(e){Assemble.emit("preInit",e);Assemble.initPlugins(e);Assemble.emit("init",e)};Assemble.initPlugins=function(e){e.use(p.tasks(e.name));e.use(p.streams());e.use(p.render());e.use(p.fs())};f=Assemble;var A=f;export default A;
+

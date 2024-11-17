@@ -1,0 +1,4 @@
+// git-repo-name@0.6.0 downloaded from https://ga.jspm.io/npm:git-repo-name@0.6.0/index.js
+
+import r from"url";import i from"path";import o from"lazy-cache";import n from"cwd";import e from"file-name";import a from"remote-origin-url";var t={};var f=o(null);var p=null;require=f;n;e;a;require=p;t=f;var c=t;var l={};var m=r;var v=i;var s=c;l=function(r,i){if("function"===typeof r){i=r;r="."}var o=v.resolve(s.cwd(r),".git/config");s.origin(o,(function(r,o){if(r)i(r);else if(o){var n=m.parse(o);var e=n.pathname.split(v.sep);i(null,s.filename(e.pop()))}else i(new Error('cannot find ".git/config"'))}))};l.sync=function(r){var i=v.resolve(s.cwd(r),".git/config");var o=s.origin.sync(i);if(!o)throw new Error('cannot find ".git/config"');var n=m.parse(o);var e=n.pathname.split(v.sep);return s.filename(e.pop())};var u=l;const g=l.sync;export default u;export{g as sync};
+
